@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" >
+
+   <servlet>
+        <servlet-name>OuterPage</servlet-name>
+        <servlet-class>forw.OuterPage</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>OuterPage</servlet-name>
+        <url-pattern>/outer</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>InnerPage</servlet-name>
+        <servlet-class>forw.InnerPage</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>InnerPage</servlet-name>
+        <url-pattern>/inner</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>OuterPage1</servlet-name>
+        <servlet-class>forw.OuterPage1</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>OuterPage1</servlet-name>
+        <url-pattern>/outer1</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>InnerPage1</servlet-name>
+        <servlet-class>forw.InnerPage1</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>InnerPage1</servlet-name>
+        <url-pattern>/inner1</url-pattern>
+    </servlet-mapping>
+  
+      <servlet>
+        <servlet-name>PalindromePage</servlet-name>
+        <servlet-class>forw.PalindromePage</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>PalindromePage</servlet-name>
+        <url-pattern>/palindrome</url-pattern>
+    </servlet-mapping>
+  
+    <servlet>
+        <servlet-name>PalindromePage1_ex3</servlet-name>
+        <servlet-class>forw.PalindromePage1</servlet-class>
+        
+        <init-param>
+            <param-name>whatToRead</param-name>
+            <param-value>nom</param-value>
+        </init-param>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>PalindromePage1_ex3</servlet-name>
+        <url-pattern>/PalindromePage1</url-pattern>
+        <url-pattern>/PalindromePage1_ex3</url-pattern>
+    </servlet-mapping>
+      
+    <servlet>
+        <servlet-name>SalaryAnalyzer</servlet-name>
+        <servlet-class>forw.SalaryAnalyzer</servlet-class>        
+        <init-param>
+            <param-name>whatToRead</param-name>
+            <param-value>salary</param-value>
+        </init-param>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>SalaryAnalyzer</servlet-name>
+        <url-pattern>/SalaryAnalyzer</url-pattern>
+        <url-pattern>/sal</url-pattern>
+    </servlet-mapping>  
+    
+     <servlet>
+        <servlet-name>sendRedirect</servlet-name>
+        <servlet-class>forw.SendRedirect</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>sendRedirect</servlet-name>
+        <url-pattern>/send</url-pattern>
+    </servlet-mapping>   
+    
+    <servlet>
+        <servlet-name>sendRedirect1</servlet-name>
+        <servlet-class>forw.SendRedirect1</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>sendRedirect1</servlet-name>
+        <url-pattern>/send1</url-pattern>
+    </servlet-mapping>   
+    
+    <servlet>
+        <servlet-name>sendRedirect2</servlet-name>
+        <servlet-class>forw.SendRedirect2</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>sendRedirect2</servlet-name>
+        <url-pattern>/send2</url-pattern>
+    </servlet-mapping>   
+</web-app>
