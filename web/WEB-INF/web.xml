@@ -3,6 +3,47 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" >
 
+    
+    <servlet>
+        <servlet-name>OuterPage_attribute1</servlet-name>
+        <servlet-class>forw.OuterPage_attribute1</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>OuterPage_attribute1</servlet-name>
+        <url-pattern>/outerattribute1</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>InnerPage_attribute1</servlet-name>
+        <servlet-class>forw.InnerPage_attribute1</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>InnerPage_attribute1</servlet-name>
+        <url-pattern>/innerattribute1</url-pattern>
+    </servlet-mapping> 
+    
+    <servlet>
+        <servlet-name>OuterPage_attribute</servlet-name>
+        <servlet-class>forw.OuterPage_attribute</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>OuterPage_attribute</servlet-name>
+        <url-pattern>/outerattribute</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>InnerPage_attribute</servlet-name>
+        <servlet-class>forw.InnerPage_attribute</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>InnerPage_attribute</servlet-name>
+        <url-pattern>/innerattribute</url-pattern>
+    </servlet-mapping> 
+    
    <servlet>
         <servlet-name>OuterPage</servlet-name>
         <servlet-class>forw.OuterPage</servlet-class>
@@ -114,4 +155,35 @@
         <servlet-name>sendRedirect2</servlet-name>
         <url-pattern>/send2</url-pattern>
     </servlet-mapping>   
+    
+    <servlet>
+        <servlet-name>welcome</servlet-name>
+        <servlet-class>forw.WelcomePage</servlet-class>        
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>welcome</servlet-name>
+        <url-pattern>/welcome</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>frontPage</servlet-name>
+        <servlet-class>forw.FrontPage</servlet-class>        
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>frontPage</servlet-name>
+        <url-pattern>/frontPage</url-pattern>
+    </servlet-mapping>
+    
+    <context-param>
+        <param-name>user</param-name>
+        <param-value>stud</param-value>
+    </context-param>
+    
+    <context-param>
+        <param-name>pwd</param-name>
+        <param-value>111</param-value>
+    </context-param>
+
 </web-app>
