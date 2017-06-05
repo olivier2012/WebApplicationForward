@@ -3,9 +3,8 @@ package forw;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.*;
-import static java.lang.Math.random;
-import static java.lang.StrictMath.random;
 import java.util.GregorianCalendar;
+import java.util.Random;
 
 public class OuterPage_attribute1 extends HttpServlet {
     
@@ -14,21 +13,28 @@ public class OuterPage_attribute1 extends HttpServlet {
         resp.setContentType("text/html");
         
         PrintWriter pw = resp.getWriter();
-        random gen = new random();
-        new Integer(gen);
-        
+        Integer resu1 = randInt(0,255);
+        Integer resu2 = randInt(0,255);
+        Integer resu3 = randInt(0,255);
+ 
         pw.println("<h2>Hello , page OuterPage</h2>");
         req.setAttribute("curDateTime", new GregorianCalendar ());
-        req.setAtrribute("red", (int)((new random()).nextInt(255))) );
-        req.setAtrribute("green", new random());
-        req.setAtrribute("blue", new random());
+        req.setAttribute("red", resu1);
+        req.setAttribute("green",resu2);
+        req.setAttribute("blue", resu3);
         
 //        resp.flushBuffer();
 //pw.close();
         
-        RequestDispatcher rd = req.getRequestDispatcher("/innerattribute"); // url-pattern of InnerPage from DD 
+        RequestDispatcher rd = req.getRequestDispatcher("/innerattribute1"); // url-pattern of InnerPage from DD 
 //        try {   Thread.sleep(10000);   }
 //        catch(InterruptedException e) {  }
         rd.forward(req, resp);
     }
+   public static Integer randInt(int min , int max){
+     Random rand = null;
+     int randomNum = rand.nextInt((max-min)+1)+min;
+     return Integer.valueOf(randomNum);
+    }
+   
 }
