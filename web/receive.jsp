@@ -37,7 +37,9 @@
            
             out.println(String.format("<br/><hr/>Today is %TY %1$TB %1$Td ", gc));
             
-            pageContext.include("/index.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
+            rd.include(request, response);
+         //   pageContext.include("/index.jsp");
         %>
 
 
