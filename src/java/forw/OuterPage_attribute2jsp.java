@@ -6,7 +6,7 @@ import java.io.*;
 import java.util.GregorianCalendar;
 import java.util.Random;
 
-public class OuterPage_attribute1 extends HttpServlet {
+public class OuterPage_attribute2jsp extends HttpServlet {
     
   @Override
   public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
@@ -26,7 +26,7 @@ public class OuterPage_attribute1 extends HttpServlet {
 //        resp.flushBuffer();
 //pw.close();
         
-        RequestDispatcher rd = req.getRequestDispatcher("/innerattribute1"); // url-pattern of InnerPage from DD 
+        RequestDispatcher rd = req.getRequestDispatcher("/receive.jsp"); // url-pattern of InnerPage from DD 
 //        try {   Thread.sleep(10000);   }
 //        catch(InterruptedException e) {  }
         rd.forward(req, resp);

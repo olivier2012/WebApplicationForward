@@ -186,4 +186,13 @@
         <param-value>111</param-value>
     </context-param>
 
+    <servlet>
+        <servlet-name>OuterPage_attribute2jsp</servlet-name>
+        <servlet-class>forw.OuterPage_attribute2jsp</servlet-class>        
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>OuterPage_attribute2jsp</servlet-name>
+        <url-pattern>/OuterP</url-pattern>
+    </servlet-mapping>
 </web-app>
